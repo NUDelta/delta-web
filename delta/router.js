@@ -13,7 +13,7 @@ Router.map(function() {
         }
     });
     this.route('Resources');
-    this.route('Apply');
+    this.route('JoinUs');
     this.route('Faq');
     this.route('Sprint', {
         template: 'sprintHome',
