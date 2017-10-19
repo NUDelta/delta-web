@@ -6,3 +6,4 @@ cp delta/c.js core/collections/.
 cp delta/joinus.html core/client/templates/.
 cp delta/people.js core/server/data/.
 cp delta/dtr.html core/client/.
+cp delta/dtr.css core/client/.
