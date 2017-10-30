@@ -119,7 +119,8 @@ Router.map(function() {
     this.route('/People/:_id/edit', {
         name: 'personEdit',
         data: function() {
-            if (this.params._id === 'hzhang' || this.params._id === 'measterday' || this.params._id === 'lgerber' || this.params._id === 'eorourke') { // HQ sees all
+            // if (this.params._id === 'hzhang' || this.params._id === 'measterday' || this.params._id === 'lgerber' || this.params._id === 'eorourke') { // HQ sees all
+            if (faculty.indexOf(this.params._id) !== -1) { // faculty should see all SIGS
                 return {
                     person: People.findOne(this.params._id),
                     projects: Projects.find(),

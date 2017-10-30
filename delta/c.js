@@ -1,4 +1,6 @@
-admins = ['hzhang', 'kchen', 'jshi', 'ykim', 'measterday','lgerber', 'eharburg', 'eorourke', 'rlouie', 'dreeslewis', 'efoong', 'jgorson', 'scarlson', 'lmaliakal', 'kgarg'];
+faculty = ['hzhang', 'measterday','lgerber', 'eorourke'];
+admins = ['hzhang', 'measterday','lgerber', 'eorourke', 'kchen', 'jshi', 'ykim', 'eharburg', 'rlouie', 'dreeslewis',
+          'efoong', 'jgorson', 'scarlson', 'lmaliakal', 'kgarg'];
 
 People = new Mongo.Collection("people");
 People.allow({
