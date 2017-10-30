@@ -23,7 +23,8 @@ git submodule update --init --recursive
 ```
 
 3. `meteor run --settings settings.json`.
-4. Update the `app` attribute in the `core/mup.json` file to the pwd of DeltaWeb on your machine.
+4. Run `./copy.sh` from the root directory. This must be done each time any of the files in the `delta/` directory are changed.
+5. Update the `app` attribute in the `core/mup.json` file to the pwd of DeltaWeb on your machine.
 
 ## Deploy Information
 
