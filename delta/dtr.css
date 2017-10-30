@@ -136,7 +136,7 @@ textarea {
     transition: background 0.5s ease, padding 0.8s linear;
 }
 
-.btn-lg 
+.btn-lg
     text-transform: uppercase;
     background-color: #ffe8c1;
     color: #333;
@@ -587,7 +587,7 @@ h2.h-light {
     top: 0px;
 }
 
-.profile-edit .projects-list-item .glyphicon-minus {
+.profile-edit .projects-list-item .glyphicon-pencil {
     right: 50px;
 }
 
