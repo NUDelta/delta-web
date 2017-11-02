@@ -102,8 +102,8 @@ def format_papers(header, papers):
         'titles': normalized_header.index('title'),
         'conferences': normalized_header.index('conferencejournalworkshopVenueNameAbbreviated'),
         'years': normalized_header.index('year'),
-        'pdfs': normalized_header.index('linkToPdf'),
-        'awards': normalized_header.index('award')
+        'pdfs': normalized_header.index('websiteLink'),
+        'award': normalized_header.index('award')
     }
 
     # format output
@@ -116,7 +116,7 @@ def format_papers(header, papers):
             'conference': output[i][indicies['conferences']].replace('\n', '').replace('\r', ''),
             'year': output[i][indicies['years']],
             'pdf': output[i][indicies['pdfs']].replace('\n', '').replace('\r', ''),
-            'award': output[i][indicies['awards']]
+            'award': output[i][indicies['award']]
         }
 
     # sort output by year and conference
