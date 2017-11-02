@@ -67,7 +67,7 @@ Router.map(function() {
         path: '/Sprint/Projects/:proj/:_id',
         template: 'Sprint',
         data: function() {
-            return Sprints.findOne(this.params._id)
+            return Sprints.findOne(this.params._id);
         },
         waitOn: function() {
             return [
@@ -88,7 +88,7 @@ Router.map(function() {
                 Meteor.subscribe('projects')
             ];
         }
-    })
+    });
     this.route('Vision', {path: '/'});
     this.route('/Projects/:_id', {
         name: "Project",
@@ -125,12 +125,12 @@ Router.map(function() {
                     person: People.findOne(this.params._id),
                     projects: Projects.find(),
                     sigs: Sigs.find()
-                }
+                };
             } else {
                 return {
                     person: People.findOne(this.params._id),
                     projects: Projects.find({people: this.params._id})
-                }
+                };
             }
         },
         waitOn: function() {
@@ -168,7 +168,7 @@ var requireLogin = function() {
     } else {
         this.next();
     }
-}
+};
 
 Router.onBeforeAction(requireLogin, {
     only: ['Sprint/Projects/:proj', 'Sprint', 'personEdit', 'rosterEdit', 'applications']
