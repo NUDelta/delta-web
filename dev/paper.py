@@ -140,35 +140,47 @@ def create_html(papers, file_name):
     output_string = "<template name=\"papers\">\n" + \
                     "<div class=\"container\" id=\"paper\">\n" + \
                     "<div class=\"row-fluid\">\n" + \
-                    "<div class=\"col-lg-8 col-lg-offset-2 col-md-12\">\n"
+                    "<div class=\"col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2\">\n"
 
     # build string with papers
     current_year = papers[0]['year']
     output_string += "<h3>" + current_year + "</h3>\n"
 
     for paper in papers:
-        pdf = paper['pdf']
-        title = paper['title']
-        conference = paper['conference']
-        authors = paper['author']
-        award = paper['award']
+        if paper['putit'].strip() != "Wait -- don't put it up yet":
+            pdf = paper['pdf'].strip()
+            title = paper['title'].strip()
+            conference = paper['conference'].strip()
+            authors = paper['author'].strip()
+            award = paper['award'].strip()
+            year = paper['year']
 
-        # add year and line break
-        if(paper['year'] != current_year):
-            current_year = paper['year']
-            output_string += "<h3>" + current_year + "</h3>\n"
+            # add year and line break
+            if(year != current_year):
+                current_year = year
+                output_string += "<h3>" + current_year + "</h3>\n"
 
-        # add link to paper and conference
-        output_string += "<a href=\'" + pdf + "'>" + title + "</a>"
-        output_string += "<span style='margin-left:10px;font-size: 12px;'>" + conference + "</span>\n"
+            # add link to paper and conference
+            # if no link, only show title
+            if pdf == '':
+                output_string += "<span>" + title + "</span>"
+            else:
+                output_string += "<a href=\'" + pdf + "'>" + title + "</a>"
 
-        # add award, if applicable
-        if paper['award'] != "":
-            output_string += "<span style='background-color:#edb055; color:#FFFFFF;padding-left: 0.5em;" + \
-                             "padding-right: 0.5em;font-weight:bold'>" + award + "</span>\n"
+            # add conference and year
+            # ignore year if forthcoming
+            if year.lower() == 'forthcoming':
+                output_string += "<span style='margin-left:10px;font-size: 12px;'>" + conference + "</span>\n"
+            else:
+                output_string += "<span style='margin-left:10px;font-size: 12px;'>" + conference + " " + year + "</span>\n"
 
-        # add authors
-        output_string += "<p class='paper-author'>" + authors + "</p>\n"
+            # add award, if applicable
+            if paper['award'] != "":
+                output_string += "<span style='background-color:#edb055; color:#FFFFFF;padding-left: 0.5em;" + \
+                                 "padding-right: 0.5em;font-weight:bold'>" + award + "</span>\n"
+
+            # add authors
+            output_string += "<p class='paper-author'>" + authors + "</p>\n"
 
     # add template string to end
     output_string += "</div>" + \
@@ -188,7 +200,7 @@ def create_html(papers, file_name):
 def main():
     header, papers = pull_from_google()
     formatted_papers = format_papers(header, papers)
-    html = create_html(formatted_papers, '../delta/paper.html')
+    create_html(formatted_papers, '../delta/paper.html')
 
 
 if __name__ == '__main__':
