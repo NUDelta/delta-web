@@ -16,6 +16,10 @@ body {
     padding-bottom: 30px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
 
 /*#header .col-lg-8, #header .col-md-8 {
    padding-left: 0px !important;
@@ -85,9 +89,17 @@ p.font-small {
     font-size: 80% !important;
 }
 
-.dtr-content h3 {
+#vision h2, #work h2, #apply h2 {
     color: #333;
-    font-weight: 600;
+    font-weight: normal;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    border-bottom: 2px solid #FBAF3C;
+}
+
+.dtr-content h3, #paper h3{
+    color: #333;
+    font-weight: normal;
     padding-bottom: 10px;
     padding-top: 15px;
     border-bottom: 1px solid #333;
@@ -262,10 +274,6 @@ textarea {
 
 .jumbotron p {
     font-weight: 300;
-}
-
-.dtr-content h2 {
-    font-weight: 600;
 }
 
 #projects a:link, #projects a:visited {
@@ -678,4 +686,21 @@ h2.h-light {
 
 #login-dropdown-list .alert {
     display: none;
+}
+
+#work img{
+    width: 100%;
+}
+
+.padding-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.padding-left-0 {
+    padding-left: 0 !important;
+}
+
+.padding-right-0 {
+    padding-right: 0 !important;
 }

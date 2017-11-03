@@ -1,5 +1,5 @@
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Slabo+27px|Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
 </head>
 
 <template name="layout">
@@ -42,6 +42,7 @@
 
 <template name='navItems'>
     <li class="navitem {{ activeIfTemplateIs 'Vision' }}"><a href="{{ pathFor 'Vision'}}">Vision <span class="sr-only">(current)</span></a></li>
+    <li class="navitem {{ activeIfTemplateIs 'HowWeWork' }}"><a href="{{ pathFor 'HowWeWork'}}">How We Work</a></li>
     <li class="navitem {{ activeIfTemplateIs 'People' }}"><a href="{{ pathFor 'People'}}">People</a></li>
     <li class="navitem {{ activeIfTemplateIs 'Projects' }}"><a href="{{pathFor 'Projects'}}">Projects</a></li>
     <li class="navitem {{ activeIfTemplateIs 'Papers' }}"><a href="{{ pathFor 'Papers'}}">Papers</a></li>
