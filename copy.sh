@@ -10,3 +10,4 @@ cp delta/dtr.css core/client/.
 cp delta/projects.js core/server/data/.
 cp delta/worth.js core/client/templates/.
 cp delta/work.html core/client/templates/.
+cp delta/login.html core/client/templates/application/.
