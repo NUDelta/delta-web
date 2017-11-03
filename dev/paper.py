@@ -139,8 +139,8 @@ def create_html(papers, file_name):
     # add template string to front
     output_string = "<template name=\"papers\">\n" + \
                     "<div class=\"container\" id=\"paper\">\n" + \
-                    "<div class=\"row-fluid\">\n" + \
-                    "<div class=\"col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2\">\n"
+                    "<div class=\"row\">\n" + \
+                    "<div class=\"col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1\">\n"
 
     # build string with papers
     current_year = papers[0]['year']
@@ -172,7 +172,8 @@ def create_html(papers, file_name):
             if year.lower() == 'forthcoming':
                 output_string += "<span style='margin-left:10px;font-size: 12px;'>" + conference + "</span>\n"
             else:
-                output_string += "<span style='margin-left:10px;font-size: 12px;'>" + conference + " " + year + "</span>\n"
+                output_string += "<span style='margin-left:10px;font-size: 12px;'>" + \
+                                 conference + ' ' + year + "</span>\n"
 
             # add award, if applicable
             if paper['award'] != "":
