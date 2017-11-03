@@ -1,6 +1,7 @@
 Router.configure({layoutTemplate: 'layout', loadingTemplate: 'loading'});
 
 Router.map(function() {
+    this.route('HowWeWork');
     this.route('Papers');
     this.route('People', {
         waitOn: function() {
