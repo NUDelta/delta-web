@@ -32,13 +32,12 @@
 
 2. From the cloned repo, navigate to `dev` and run `python paper.py` to pull papers and generate `delta/paper.html`.
 
-3. Run `./copy.sh` from the root directory.
+### Making Changes to Web Code
+1. Start Meteor by navigating to `core/` and run `meteor`.
 
-4. Navigate to `core/` and run `meteor`.
+2. Edit the Delta Lab website-specific files in `delta/` and run `./copy.sh` whenever you wish to see the changes. **Note**: this will take a bit longer than Meteor normally does to update the client since Meteor must rebuild the application each time `./copy.sh` is run.
 
-5. Edit the Delta Lab website-specific files in `delta/` and run `./copy.sh` whenever you wish to see the changes. **Note**: this will take a bit longer than Meteor normally does to update the client since Meteor must rebuild the application each time `./copy.sh` is run.
-
-6. If you want to make changes to the WebCore specifically, see [here](https://stackoverflow.com/questions/5542910/how-do-i-commit-changes-in-a-git-submodule) on how to update submodule changes.
+3. If you want to make changes to the WebCore specifically, see [here](https://stackoverflow.com/questions/5542910/how-do-i-commit-changes-in-a-git-submodule) on how to update submodule changes.
 
 ## Deployment
 
