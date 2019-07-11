@@ -5,6 +5,8 @@ computeWorth = function(person) {
         return 9.5;
     } else if (person._id === 'lgerber' || person._id === 'eorourke') {
         return 9;
+    } else if (person.role.toLowerCase() === 'postdoctoral fellow') {
+        return 8.5;
     } else if (person.role.toLowerCase() === 'phd student') {
         return 8;
     } else if (person.role.toLowerCase() === 'postbac researcher') {
