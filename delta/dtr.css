@@ -185,7 +185,7 @@ textarea {
     transition: background 0.5s ease, padding 0.8s linear;
 }
 
-.btn-lg
+.btn-lg {
     text-transform: uppercase;
     background-color: #ffe8c1;
     color: #333;
@@ -232,7 +232,6 @@ textarea {
 
 .person-name {
     font-size: 2em;
-    font-weight: 700px;
 }
 
 .person-title {
@@ -358,8 +357,8 @@ video.projects-banner {
 }
 
 .project-person-role {
-    color: "lightgrey";
-    margin-left: "20px";
+    color: lightgrey;
+    margin-left: 20px;
 }
 
 a.project-publication-name {
@@ -613,7 +612,7 @@ h2.h-light {
 }
 
 .making-new input, .making-new textarea {
-    border: default;
+    border: 1px;
 }
 
 .profile-edit .project-edit {
