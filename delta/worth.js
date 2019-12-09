@@ -1,9 +1,7 @@
 computeWorth = function(person) {
-    if (person._id === 'measterday') {
+    if (person._id === 'eorourke') {
         return 10;
-    } else if (person._id === 'hzhang') {
-        return 9.5;
-    } else if (person._id === 'lgerber' || person._id === 'eorourke') {
+    } else if (person._id === 'lgerber' || person._id === 'measterday' || person._id === 'hzhang') {
         return 9;
     } else if (person.role.toLowerCase() === 'postdoctoral fellow') {
         return 8.5;
