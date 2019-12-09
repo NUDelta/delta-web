@@ -14,3 +14,4 @@ cp delta/login.html core/client/templates/application/.
 cp delta/people.html core/client/templates/people/.
 cp delta/person.html core/client/templates/people/.
 cp delta/projects.html core/client/templates/sigs/.
+cp -a delta/images/. core/public/images/
