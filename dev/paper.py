@@ -22,12 +22,16 @@ def pull_from_google():
     gc = gspread.authorize(credentials)
 
     # pull papers from Delta Lab paper spreadsheet
-    paper_worksheet = gc.open_by_url('https://docs.google.com/spreadsheets' +
-                                     '/d/1Z5Qf5s4FMflwfsxnjL3mSeYlWVu4dHgJ3ZYGsDA9cc4/edit#gid=1')
+    website_info_spreadsheet = gc.open_by_url('https://docs.google.com/spreadsheets' +
+                                              '/d/1Z5Qf5s4FMflwfsxnjL3mSeYlWVu4dHgJ3ZYGsDA9cc4/edit#gid=1')
+
+    # select relevant worksheet
+    paper_worksheet = website_info_spreadsheet.worksheet("Delta Papers")
+    paper_worksheet_vals = paper_worksheet.get_all_values()
 
     # split into header and paper data
-    header = paper_worksheet.get_worksheet(3).get_all_values()[0]
-    papers = paper_worksheet.get_worksheet(3).get_all_values()[1:]
+    header = paper_worksheet_vals[0]
+    papers = paper_worksheet_vals[1:]
 
     return header, papers
 
