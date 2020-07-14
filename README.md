@@ -17,9 +17,10 @@
 
     ```
     {
-        "gmailKey": "NUDELTA GMAIL PASSWORD HERE"
+        "MAIL_URL": "mail URL here"
     }
     ```
+   Emails are sent using [SendGrid](https://sendgrid.com/). Ask Kapil for the details for the SMTP server used. 
 
 3. Ask Yongsung or Kapil for the `dev/credential.json` file that will let you run `dev/paper.py` to fetch the latest papers.
 
