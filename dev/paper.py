@@ -38,7 +38,7 @@ def pull_from_google():
 
 def normalize_header(header):
     """
-    Normalize header values to be camelCase without numbers, puncutations, or symbols.
+    Normalize header values to be camelCase without numbers, punctuations, or symbols.
 
     Args:
         header (list of strings): header row of spreadsheet
@@ -51,7 +51,7 @@ def normalize_header(header):
 
 def normalize_string(input):
     """
-    Normalize an input string such that the output is camelCase without numbers, puncutations, or symbols.
+    Normalize an input string such that the output is camelCase without numbers, punctuations, or symbols.
     Examples:
         "First Name" -> "firstName"
         "Market Cap (millions) -> "marketCapMillions
@@ -205,7 +205,7 @@ def create_html(papers, file_name):
 def main():
     header, papers = pull_from_google()
     formatted_papers = format_papers(header, papers)
-    create_html(formatted_papers, '../delta/paper.html')
+    create_html(formatted_papers, '../client/templates/paper.html')
 
 
 if __name__ == '__main__':

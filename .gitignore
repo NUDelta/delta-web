@@ -261,5 +261,6 @@ $RECYCLE.BIN/
 
 # Custom
 settings.json
+settings.dev.json
 credential.json
 
