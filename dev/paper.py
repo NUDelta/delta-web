@@ -1,9 +1,7 @@
-from __future__ import print_function
-
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from bs4 import BeautifulSoup as bs
 from operator import itemgetter
-
 
 def pull_from_google():
     """
@@ -193,10 +191,13 @@ def create_html(papers, file_name):
                      "</div>" + \
                      "</template>"
 
+    # format output_string as html
+    soup = bs(output_string, features="html.parser")
+    pretty_html = soup.prettify()
+
     # write output file
     f_out = open(file_name, 'w')
-    output_string = str(output_string.encode('utf-8'))
-    f_out.write(output_string)
+    f_out.write(pretty_html)
     f_out.close()
 
     return output_string
