@@ -1,0 +1,23 @@
+<template name="LoginPage">
+  <div class="dtr-content container text-center" id="login-page">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 padding-0">
+    <h1>Log In</h1>
+    <h4>Welcome back to Delta Lab!</h4>
+    <div>
+        <form>
+            <input id="login-username" type="text" placeholder="Username" class="form-control"/>
+            <input id="login-password" type="password" placeholder="Password" class="form-control"/>
+            <button class="btn btn-primary" id="login-buttons-password" type="submit">Sign in</button>
+
+        </form>
+        <a id="forgot-password" href="/forgot-password">Forgot Password?</a>
+        <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+          Oops! Try again
+        </div>
+    </div>
+    </div>
+  </div>
+
+</template>

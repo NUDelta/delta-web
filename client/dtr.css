@@ -729,9 +729,14 @@ h2.h-light {
     top: -5px;
 }
 
-#login-dropdown-list .alert {
+/* log in */
+#login-page .alert {
     display: none;
 }
+
+/* #login-dropdown-list .alert {
+    display: none;
+} */
 
 #work img{
     width: 100%;
