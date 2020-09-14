@@ -734,9 +734,29 @@ h2.h-light {
     display: none;
 }
 
-/* #login-dropdown-list .alert {
-    display: none;
-} */
+#login-page h1{
+  margin-top: 0px;
+}
+
+#login-page form{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#login-page img {
+  display: block;
+  height: 150px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+#login-password{
+  margin-bottom: 5px;
+}
+
+#login-page button{
+  margin-top: 30px;
+}
 
 #work img{
     width: 100%;
