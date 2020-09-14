@@ -738,6 +738,10 @@ h2.h-light {
   margin-top: 0px;
 }
 
+#login-page p{
+  font-size: 1.1em;
+}
+
 #login-page form{
   margin-top: 15px;
   margin-bottom: 15px;
@@ -754,10 +758,15 @@ h2.h-light {
   margin-bottom: 5px;
 }
 
-#login-page button{
+#login-buttons-password{
   margin-top: 30px;
 }
 
+#visitor-button:hover {
+  background: #ccc;
+}
+
+/*how we work*/
 #work img{
     width: 100%;
 }

@@ -1,15 +1,9 @@
 Template.LoginPage.events({
-  // 'keypress input': function(e) {
-  //     $('.alert').hide()
-  // },
   'click input': function(e) {
-    // $('.alert').hide();
     e.stopPropagation();
   },
   'submit form': function(e) {
-    //alert("something");
     e.preventDefault();
-    //Router.go('/');
     var username = $('#login-username').val(),
       password = $('#login-password').val();
     if (username === '' || password === '') {
@@ -26,6 +20,9 @@ Template.LoginPage.events({
   },
   'click #logout-button': function(e) {
     Meteor.logout();
+  },
+  'click #visitor-button': function(e) {
+    Router.go('/');
   }
 });
 
