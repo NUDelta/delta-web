@@ -16,19 +16,7 @@
                     <button class="btn btn-primary col-sm-12" id="logout-button">Log out</button>
                 </div>
             {{else}}
-                <a class="dropdown-toggle" data-toggle="dropdown">Log in</a>
-                <div class="dropdown-menu">
-                    <form>
-                        <input id="login-username" type="text" placeholder="Username" class="form-control"/>
-                        <input id="login-password" type="password" placeholder="Password" class="form-control"/>
-                        <button class="btn btn-primary" id="login-buttons-password" type="submit">Sign in</button>
-                    </form>
-                    <div class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <span class="sr-only">Error:</span>
-                        Oops! Try again. <a id="forgot-password" href="/forgot-password">Forgot Password?</a>
-                    </div>
-                </div>
+              <a href="/login">Log in</a>
             {{/if}}
         </li>
     </ul>
