@@ -23,3 +23,9 @@ Template.createUser.events({
         });
     }
 })
+
+Template.createUser.helpers({
+    'loggedIn': function() {
+        return !!Meteor.user();
+    }
+})
