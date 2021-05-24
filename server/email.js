@@ -8,7 +8,7 @@ Meteor.methods({
 })
 
 Meteor.startup(function() {
-    // 1. Set up stmp
+    // 1. Set up smtp
     //   your_server would be something like 'smtp.gmail.com'
     //   and your_port would be a number like 25
 
