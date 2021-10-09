@@ -19,7 +19,7 @@ module.exports = {
     },
 
     env: {
-      ROOT_URL: 'http://dtr.northwestern.edu',
+      ROOT_URL: 'http://delta.northwestern.edu',
       PORT: 80,
       MONGO_URL: 'mongodb://admin:8Ph6zyzjYQg2UhfC@delta-web-shard-00-00.bzhkx.mongodb.net:27017,delta-web-shard-00-01.bzhkx.mongodb.net:27017,delta-web-shard-00-02.bzhkx.mongodb.net:27017/delta-web?ssl=true&replicaSet=atlas-y1zitz-shard-0&authSource=admin&retryWrites=true&w=majority'
     },
