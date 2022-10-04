@@ -11,7 +11,7 @@ module.exports = {
     name: 'delta',
     path: '../',
     docker: {
-      image: 'kadirahq/meteord',
+      image: 'zodern/meteor',
     },
 
     servers: {
