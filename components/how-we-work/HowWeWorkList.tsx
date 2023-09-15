@@ -28,7 +28,7 @@ export default function HowWeWorkList(): JSX.Element {
               <Image
                 src={section.imagePath}
                 alt={section.title}
-                layout="responsive"
+                className="responsive"
               />
             </div>
             <div className="w-full md:w-1/2">

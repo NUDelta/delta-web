@@ -16,7 +16,7 @@ export default function ValuesApproach(): JSX.Element {
           <Image
             src={BannerImg}
             alt="Lab members doing Pair Research with each other."
-            layout="responsive"
+            className="responsive"
           />
           <h2 className="text-3xl font-normal border-b-2 border-dark-orange pb-2 mt-4">
             Work. Play. Design. Learn.

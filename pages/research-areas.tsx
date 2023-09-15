@@ -3,6 +3,7 @@ import Container from "../components/shared/Container";
 import ReactMarkdown from "react-markdown";
 import TeamMembers from "../components/people/TeamMembers";
 import { fetchResearchAreas, ResearchArea } from "../lib/researchAreas";
+import Image from "next/image";
 
 interface ProjectProps {
   researchAreas: ResearchArea[];
@@ -25,10 +26,13 @@ export default function Projects({ researchAreas }: ProjectProps): JSX.Element {
 
               {/* Research Area banner image */}
               {researchArea.banner_image && (
-                <img
+                <Image
                   src={researchArea.banner_image}
-                  className="w-full"
                   alt={researchArea.name}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }} // optional
                 />
               )}
 

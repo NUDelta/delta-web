@@ -22,12 +22,7 @@ export default function Header(): JSX.Element {
       <Container className="flex justify-between md:justify-start py-2 gap-6 items-center max-w-6xl">
         <div className="relative top-0 left-0 block h-full w-full md:w-3/12">
           <Link href="/">
-
-            <Image
-              src={logo}
-              alt="Screenshot of Zoom call with all lab members."
-            />
-
+            <Image src={logo} alt="Delta Lab Logo" />
           </Link>
         </div>
 
@@ -58,16 +53,15 @@ function Nav(): JSX.Element {
   return (
     <nav className={`flex flex-col md:flex-row md:space-x-4 md:items-center`}>
       {links.map(({ href, label }) => (
-        (<Link
+        <Link
           href={href}
           key={label}
           className={`py-3 px-3 hover:bg-dark-orange hover:text-black transition-colors ${
             router.pathname === href ? "bg-dark-orange text-black" : ""
-          }`}>
-
+          }`}
+        >
           {label}
-
-        </Link>)
+        </Link>
       ))}
     </nav>
   );
