@@ -39,7 +39,9 @@ export async function fetchPeople(): Promise<Person[]> {
                 "Undergraduate Student Researcher",
               status: (record.get("status") as string) ?? "Active",
               bio: (record.get("bio") as string) ?? "",
-              profile_photo: getImgUrlFromAttachmentObj(record.get("profile_photo") as Attachment[]),
+              profile_photo: getImgUrlFromAttachmentObj(
+                record.get("profile_photo") as Attachment[]
+              ),
             });
           });
 
@@ -54,7 +56,7 @@ export async function fetchPeople(): Promise<Person[]> {
         }
       );
   });
-};
+}
 
 export function sortPeople(people: Person[]): Person[] {
   // split active and alumni
@@ -89,8 +91,8 @@ export function sortPeople(people: Person[]): Person[] {
 
       // sort faculty
       const facultyOrder: Record<string, number> = {};
-      facultyOrder["Haoqi Zhang"] = 1;
-      facultyOrder['Eleanor "Nell" O\'Rourke'] = 2;
+      facultyOrder["Nell O'Rourke"] = 1;
+      facultyOrder["Haoqi Zhang"] = 2;
       facultyOrder["Matt Easterday"] = 3;
       facultyOrder["Liz Gerber"] = 4;
       faculty.sort((a, b) => {
@@ -123,4 +125,4 @@ export function sortPeople(people: Person[]): Person[] {
 
   // combine sorted sublists and return
   return [...sortedSublists[0], ...stella, ...sortedSublists[1]];
-};
+}

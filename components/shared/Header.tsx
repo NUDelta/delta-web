@@ -8,7 +8,7 @@ import logo from "./assets/logo.png";
 
 const links: { href: string; label: string }[] = [
   { href: "/how-we-work", label: "How We Work" },
-  // { href: "/people", label: "People" },
+  { href: "/people", label: "People" },
   // { href: "/research-areas", label: "Research Areas" },
   // { href: "/papers", label: "Papers" },
   { href: "/join-us", label: "Join Us" },
@@ -20,13 +20,16 @@ export default function Header(): JSX.Element {
   return (
     <header className="bg-grey text-white">
       <Container className="flex justify-between md:justify-start py-2 gap-6 items-center max-w-6xl">
-          <div className="relative top-0 left-0 block h-full w-full md:w-3/12">
-            <Link href="/">
-              <a>
-              <Image src={logo} alt="Screenshot of Zoom call with all lab members." />
-              </a>
-            </Link>
-          </div>
+        <div className="relative top-0 left-0 block h-full w-full md:w-3/12">
+          <Link href="/">
+            <a>
+              <Image
+                src={logo}
+                alt="Screenshot of Zoom call with all lab members."
+              />
+            </a>
+          </Link>
+        </div>
 
         <button
           className="border rounded px-4 py-2 border-opacity-50 md:hidden"
