@@ -9,7 +9,7 @@ import logo from "./assets/logo.png";
 const links: { href: string; label: string }[] = [
   { href: "/how-we-work", label: "How We Work" },
   { href: "/people", label: "People" },
-  // { href: "/research-areas", label: "Research Areas" },
+  { href: "/research-areas", label: "Research Areas" },
   // { href: "/papers", label: "Papers" },
   { href: "/join-us", label: "Join Us" },
 ];
