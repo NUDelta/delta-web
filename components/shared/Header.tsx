@@ -10,7 +10,7 @@ const links: { href: string; label: string }[] = [
   { href: "/how-we-work", label: "How We Work" },
   { href: "/people", label: "People" },
   { href: "/research-areas", label: "Research Areas" },
-  // { href: "/papers", label: "Papers" },
+  { href: "/publications", label: "Publications" },
   { href: "/join-us", label: "Join Us" },
 ];
 
