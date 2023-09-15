@@ -17,22 +17,37 @@ export default function Slides(): JSX.Element {
         infiniteLoop={true}
       >
         <div>
-          <Image src={image1} alt="Screenshot of Zoom call with all lab members." layout="responsive" />
+          <Image
+            src={image1}
+            alt="Screenshot of Zoom call with all lab members."
+            layout="responsive"
+          />
         </div>
 
         <div>
-          <Image src={image2} alt="Lab meeting in a glass fishbowl-like room overlooking a machine shop." layout="responsive" />
+          <Image
+            src={image2}
+            alt="Lab meeting in a glass fishbowl-like room overlooking a machine shop."
+            layout="responsive"
+          />
         </div>
 
         <div>
-          <Image src={image3} alt="Lab members collaborating with post-it notes in a glass fishbowl-like room." layout="responsive" />
+          <Image
+            src={image3}
+            alt="Lab members collaborating with post-it notes in a glass fishbowl-like room."
+            layout="responsive"
+          />
         </div>
 
         <div>
-          <Image src={image4} alt="Lab members in Delta Lab hoodies." layout="responsive" />
+          <Image
+            src={image4}
+            alt="Lab members in Delta Lab hoodies."
+            layout="responsive"
+          />
         </div>
       </Carousel>
-
     </div>
   );
 }

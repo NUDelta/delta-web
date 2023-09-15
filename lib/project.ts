@@ -56,14 +56,16 @@ export async function getProject(
             role: person.role,
             status: person.status,
             profile_photo: person.profile_photo,
-          }
+          };
         }
       );
 
       const partialParsedProjInfo = {
         id: record.id as string,
         name: (record.get("name") as string) ?? "",
-        banner_image: getImgUrlFromAttachmentObj(record.get("banner_image") as Attachment[]),
+        banner_image: getImgUrlFromAttachmentObj(
+          record.get("banner_image") as Attachment[]
+        ),
         description: (record.get("description") as string) ?? "",
         status: (record.get("status") as string) ?? "Active",
         demo_video: (record.get("demo_video") as string) ?? null,
@@ -98,7 +100,7 @@ export async function getProject(
       });
     });
   });
-};
+}
 
 type ProjectImages = {
   explainerImages: {
@@ -124,7 +126,9 @@ export async function fetchProjectImages(
       // get all additional images for the project
       const explainerImages: ProjectImages["explainerImages"] = [];
       [1, 2, 3, 4, 5].map((i) => {
-        const imageUrl = getImgUrlFromAttachmentObj(record.get(`image_${i}`) as Attachment[]);
+        const imageUrl = getImgUrlFromAttachmentObj(
+          record.get(`image_${i}`) as Attachment[]
+        );
         const description = record.get(`image_${i}_description`) as string;
 
         if (imageUrl && description) {
@@ -140,7 +144,7 @@ export async function fetchProjectImages(
       });
     });
   });
-};
+}
 
 type ProjectPublication = {
   id: string;
@@ -185,7 +189,7 @@ export async function fetchPublications(
       resolve(publications);
     });
   });
-};
+}
 
 export async function getAllProjectIds(): Promise<string[]> {
   return new Promise((resolve, reject) => {
@@ -212,4 +216,4 @@ export async function getAllProjectIds(): Promise<string[]> {
         }
       );
   });
-};
+}
