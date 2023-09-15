@@ -15,12 +15,18 @@ body {
 
 .prose a,
 .prose-lg a {
+  color: rgb(55, 65, 81);
   font-weight: 400;
-  background-color: #ffe8c1;
+  background-color: #fff9bc;
   text-decoration: none;
   transition: background-color 150ms ease-in-out;
   padding-left: 0.1em;
   padding-right: 0.1em;
+}
+
+.prose a:hover,
+.prose-lg a:hover {
+  background-color: #f5ed9c;
 }
 
 .prose ul,
@@ -33,16 +39,12 @@ body {
   list-style-type: decimal;
 }
 
-.prose a:hover,
-.prose-lg a:hover {
-  background-color: #FBAF3C;
-}
-
 .prose h2,
 .prose-lg h2 {
-  border-bottom: 1px solid #FBAF3C;
+  border-bottom: 1px solid black;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .player-wrapper {
@@ -60,18 +62,20 @@ body {
 /* From: https://tailwindcomponents.com/component/link-underline-animation */
 .link-underline {
   border-bottom-width: 0;
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
   background-size: 0 1px;
   background-position: 0 100%;
   background-repeat: no-repeat;
-  transition: background-size .5s ease-in-out;
+  transition: background-size 0.5s ease-in-out;
 }
 
 .link-underline-black {
-  background-image: linear-gradient(transparent, transparent), linear-gradient(black, black)
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(black, black);
 }
 
 .link-underline:hover {
   background-size: 100% 1px;
-  background-position: 0 100%
+  background-position: 0 100%;
 }
