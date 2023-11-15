@@ -1,6 +1,6 @@
 # Delta Lab Website
 
-Website for Nnorthwestern's Delta Lab. View live at [https://delta.northwestern.edu/](https://delta.northwestern.edu/).
+Website for Northwestern's Delta Lab. View live at [https://delta.northwestern.edu/](https://delta.northwestern.edu/).
 
 ## Setup
 
