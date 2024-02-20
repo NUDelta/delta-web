@@ -37,7 +37,7 @@ export default function Projects({ researchAreas }: ProjectProps): JSX.Element {
               )}
 
               {/* Research Area description */}
-              <ReactMarkdown linkTarget="_blank" className="prose-lg my-4">
+              <ReactMarkdown className="prose-lg my-4">
                 {researchArea.description}
               </ReactMarkdown>
 
