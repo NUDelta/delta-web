@@ -33,7 +33,7 @@ export default function PeopleProfiles({
             <h2 className="text-2xl font-medium">{person.name}</h2>
             <h3 className="uppercase text-gray-500 mb-4">{person.title}</h3>
 
-            <ReactMarkdown linkTarget="_blank" className="prose max-w-none">
+            <ReactMarkdown className="prose max-w-none">
               {person.bio}
             </ReactMarkdown>
           </div>
