@@ -15,6 +15,8 @@ export async function fetchPublications(): Promise<Publication[]> {
   return new Promise((resolve, reject) => {
     const results: Publication[] = [];
 
+    // TODO: sort publications by year then venue name then title
+    // should give us all 2018 CHI papers together
     base("Publications")
       .select({
         view: "Grid view",
