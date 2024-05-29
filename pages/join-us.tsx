@@ -8,8 +8,8 @@ export default function Apply(): JSX.Element {
       <Header />
 
       <Container className="mt-8">
-        <div className="prose max-w-4xl mx-auto">
-          <h2 className="text-3xl font-normal border-b-2 border-dark-orange pb-2 mt-4">
+        <div className="prose mx-auto max-w-4xl">
+          <h2 className="mt-4 border-b-2 border-dark-orange pb-2 text-3xl font-normal">
             Graduate Research
           </h2>
           <p>
@@ -115,7 +115,7 @@ export default function Apply(): JSX.Element {
             link.
           </p>
 
-          <h2 className="text-3xl font-normal border-b-2 border-dark-orange pb-2 mt-4">
+          <h2 className="mt-4 border-b-2 border-dark-orange pb-2 text-3xl font-normal">
             Undergraduate Research
           </h2>
           <p>
@@ -145,7 +145,7 @@ export default function Apply(): JSX.Element {
             science class.
           </p>
 
-          <h2 className="text-3xl font-normal border-b-2 border-dark-orange pb-2 mt-4">
+          <h2 className="mt-4 border-b-2 border-dark-orange pb-2 text-3xl font-normal">
             Industry Collaborators
           </h2>
           <p>

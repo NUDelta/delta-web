@@ -40,7 +40,7 @@ export async function fetchPeople(): Promise<Person[]> {
               status: (record.get("status") as string) ?? "Active",
               bio: (record.get("bio") as string) ?? "",
               profile_photo: getImgUrlFromAttachmentObj(
-                record.get("profile_photo") as Attachment[]
+                record.get("profile_photo") as Attachment[],
               ),
             });
           });
@@ -53,7 +53,7 @@ export async function fetchPeople(): Promise<Person[]> {
             reject(err);
           }
           resolve(results);
-        }
+        },
       );
   });
 }
@@ -120,7 +120,7 @@ export function sortPeople(people: Person[]): Person[] {
 
       // return combined sorted subarrays
       return [...faculty, ...phd, ...masters, ...ugrads];
-    }
+    },
   );
 
   // combine sorted sublists and return

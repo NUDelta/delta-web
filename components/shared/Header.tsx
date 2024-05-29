@@ -19,15 +19,15 @@ export default function Header(): JSX.Element {
 
   return (
     <header className="bg-grey text-white">
-      <Container className="flex justify-between md:justify-start py-2 gap-6 items-center max-w-6xl">
-        <div className="relative top-0 left-0 block h-full w-full md:w-3/12">
+      <Container className="flex max-w-6xl items-center justify-between gap-6 py-2 md:justify-start">
+        <div className="relative left-0 top-0 block h-full w-full md:w-3/12">
           <Link href="/">
             <Image src={logo} alt="Delta Lab Logo" />
           </Link>
         </div>
 
         <button
-          className="border rounded px-4 py-2 border-opacity-50 md:hidden"
+          className="rounded border border-opacity-50 px-4 py-2 md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           Menu
@@ -51,12 +51,12 @@ function Nav(): JSX.Element {
   const router = useRouter();
 
   return (
-    <nav className={`flex flex-col md:flex-row md:space-x-4 md:items-center`}>
+    <nav className={`flex flex-col md:flex-row md:items-center md:space-x-4`}>
       {links.map(({ href, label }) => (
         <Link
           href={href}
           key={label}
-          className={`py-3 px-3 hover:bg-dark-orange hover:text-black transition-colors ${
+          className={`px-3 py-3 transition-colors hover:bg-dark-orange hover:text-black ${
             router.pathname === href ? "bg-dark-orange text-black" : ""
           }`}
         >

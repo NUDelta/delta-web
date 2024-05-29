@@ -30,7 +30,7 @@ export async function fetchPublications(): Promise<Publication[]> {
               authors: (record.get("Authors") as string) ?? "",
               conference:
                 (record.get(
-                  "Conference/Journal/Workshop Venue name (Abbreviated)"
+                  "Conference/Journal/Workshop Venue name (Abbreviated)",
                 ) as string) ?? "",
               year: (record.get("Year") as number) ?? "",
               link: (record.get("Website Link") as string) ?? "",
@@ -46,7 +46,7 @@ export async function fetchPublications(): Promise<Publication[]> {
             reject(err);
           }
           resolve(results);
-        }
+        },
       );
   });
 }
