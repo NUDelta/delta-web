@@ -34,13 +34,13 @@ export async function fetchResearchAreas(): Promise<ResearchArea[]> {
 
             const students: Person[] = people.filter((person) => {
               return ((record.get("students") as string[]) ?? []).includes(
-                person.id
+                person.id,
               );
             });
 
             const members: Person[] = [
               ...Array.from(
-                new Set(sortPeople([...facultyMentors, ...students]))
+                new Set(sortPeople([...facultyMentors, ...students])),
               ),
             ];
 
@@ -60,7 +60,7 @@ export async function fetchResearchAreas(): Promise<ResearchArea[]> {
               name: (record.get("name") as string) ?? "",
               description: (record.get("description") as string) ?? "",
               banner_image: getImgUrlFromAttachmentObj(
-                record.get("banner_image") as Attachment[]
+                record.get("banner_image") as Attachment[],
               ),
               members: partialMembers,
             });
@@ -74,7 +74,7 @@ export async function fetchResearchAreas(): Promise<ResearchArea[]> {
             return;
           }
           resolve(results);
-        }
+        },
       );
   });
 }

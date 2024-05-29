@@ -16,10 +16,10 @@ export default function Publications({
       <Header />
 
       <Container className="mt-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="mx-auto max-w-4xl">
           {publicationYears.map((pubYear) => (
             <div key={`year-${pubYear}`} className="mb-4">
-              <h2 className="text-2xl border-b border-black font-normal mb-4">
+              <h2 className="mb-4 border-b border-black text-2xl font-normal">
                 {pubYear}
               </h2>
               {publications
@@ -33,7 +33,7 @@ export default function Publications({
                         {publication.conference} {publication.year}
                       </span>
                       {publication.award !== "" && (
-                        <span className="text-dark-orange font-semibold">
+                        <span className="font-semibold text-dark-orange">
                           {" "}
                           {publication.award}
                         </span>

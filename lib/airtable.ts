@@ -14,7 +14,7 @@ export const base = Airtable.base(process.env.AIRTABLE_BASE_ID ?? "");
  * Empty string if first attachment in attachmentArr isn't an image.
  */
 export function getImgUrlFromAttachmentObj(
-  attachmentArr: Attachment[] | undefined
+  attachmentArr: Attachment[] | undefined,
 ): string | null {
   // check if array is undefined
   if (attachmentArr === undefined) {

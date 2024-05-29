@@ -12,16 +12,16 @@ export default function ValuesApproach(): JSX.Element {
       <Header />
 
       <Container className="mt-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="mx-auto max-w-4xl">
           <Image
             src={BannerImg}
             alt="Lab members doing Pair Research with each other."
             className="responsive"
           />
-          <h2 className="text-3xl font-normal border-b-2 border-dark-orange pb-2 mt-4">
+          <h2 className="mt-4 border-b-2 border-dark-orange pb-2 text-3xl font-normal">
             Work. Play. Design. Learn.
           </h2>
-          <div className="prose prose-lg max-w-none mt-4 mb-8">
+          <div className="prose prose-lg mb-8 mt-4 max-w-none">
             <p>
               The Delta Lab is an interdisciplinary, supportive, collaborative
               community of researchers focused on solving critical problems in

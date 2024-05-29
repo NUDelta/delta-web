@@ -15,12 +15,12 @@ export default function Projects({ researchAreas }: ProjectProps): JSX.Element {
       <Header />
 
       <Container className="mt-8">
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div className="mx-auto max-w-4xl space-y-8">
           {/* Research Area component */}
           {researchAreas.map((researchArea) => (
             <div key={researchArea.id} className="bg-gray-50 p-8">
               {/* Research Area name */}
-              <h2 className="font-semibold text-3xl mb-4">
+              <h2 className="mb-4 text-3xl font-semibold">
                 {researchArea.name}
               </h2>
 
@@ -43,7 +43,7 @@ export default function Projects({ researchAreas }: ProjectProps): JSX.Element {
 
               {/* Members of Research Area */}
               <div className="w-full">
-                <h2 className="font-bold text-2xl mb-2 pb-2 border-b border-black">
+                <h2 className="mb-2 border-b border-black pb-2 text-2xl font-bold">
                   Team
                 </h2>
 

@@ -6,7 +6,7 @@ import TrainingImg from "./assets/training.jpg";
 
 export default function HowWeWorkList(): JSX.Element {
   return (
-    <div className="space-y-8 max-w-4xl mx-auto">
+    <div className="mx-auto max-w-4xl space-y-8">
       <style>{`
         .section-header {
           margin: 0;
@@ -15,7 +15,7 @@ export default function HowWeWorkList(): JSX.Element {
 
       {sections.map((section, i) => (
         <div key={i}>
-          <h2 className="text-2xl border-b border-black font-normal mb-4">
+          <h2 className="mb-4 border-b border-black text-2xl font-normal">
             {section.title}
           </h2>
           <div
